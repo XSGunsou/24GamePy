@@ -1,6 +1,5 @@
 import random
 
-
 def generate_numbers():
     return [random.randint(1, 9) for _ in range(4)]
 
@@ -18,14 +17,14 @@ def check_solution(user_input, numbers):
 
 
 def get_user_input(numbers):
-    print("Use these numbers to make 24:", numbers)
-    return input("Enter your equation (or type '/exit' to quit): ")
+    print("ใช้ตัวเลขชุดนี้ทำให้เท่ากับ 24:", numbers)
+    return input("พิมพ์วิธีทำ (หรือพิมพ์ '/exit' เพื่อออก): ")
 
 
 def play_game():
-    print("Welcome to the '24 Game'!")
-    print("Your goal is to make 24 using +, -, *, or / with the given numbers")
-    print("You can type '/exit' anytime to quit")
+    print("ยินดีต้อนรับสู่เกม 24!")
+    print("เป้าหมายของคุณคือการใช้ +, -, *, หรือ / กับตัวเลขที่ให้ทำให้เท่ากับ 24")
+    print("คุณสามารถพิมพ์ '/exit' เพื่อออกจากเกมเมื่อไหร่ก็ได้")
 
     while True:
         numbers = generate_numbers()
@@ -34,7 +33,7 @@ def play_game():
             user_input = get_user_input(numbers)
 
             if user_input == "/exit":
-                print("til next time! 😊")
+                print("แล้วเจอกันใหม่! 😊")
                 return
 
             if check_solution(user_input, numbers):
